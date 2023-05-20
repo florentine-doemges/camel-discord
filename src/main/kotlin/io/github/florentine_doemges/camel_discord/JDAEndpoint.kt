@@ -1,13 +1,11 @@
-package net.doemges.cameldiscord
+package io.github.florentine_doemges.camel_discord
 
 import net.dv8tion.jda.api.JDA
-import net.dv8tion.jda.api.JDABuilder
 import org.apache.camel.Processor
 import org.apache.camel.Producer
 import org.apache.camel.support.DefaultConsumer
 import org.apache.camel.support.DefaultEndpoint
 import org.slf4j.LoggerFactory
-import javax.security.auth.login.LoginException
 
 
 /**

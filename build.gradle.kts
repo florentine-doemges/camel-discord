@@ -8,10 +8,11 @@ plugins {
     kotlin("plugin.allopen") version "1.7.22"
     id("maven-publish")
     id("signing")
+    id("java")
 }
 
 group = "io.github.florentine-doemges"
-version = "1.0-SNAPSHOT"
+version = "0.1.0"
 
 repositories {
     mavenCentral()
@@ -55,6 +56,11 @@ tasks.named("bootJar") {
 
 tasks.named("jar"){
     enabled = true
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
 }
 
 kotlin {

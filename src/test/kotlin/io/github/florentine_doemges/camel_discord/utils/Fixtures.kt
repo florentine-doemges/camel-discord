@@ -1,4 +1,4 @@
-package net.doemges.utils
+package io.github.florentine_doemges.camel_discord.utils
 
 import com.appmattus.kotlinfixture.decorator.fake.javafaker.javaFakerStrategy
 import com.appmattus.kotlinfixture.kotlinFixture

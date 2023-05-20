@@ -1,9 +1,9 @@
-package net.doemges.cameldiscord
+package io.github.florentine_doemges.camel_discord
 
 import assertk.assertThat
 import assertk.assertions.isSuccess
 import assertk.assertions.isTrue
-import net.doemges.cameldiscord.config.JDAConfig
+import io.github.florentine_doemges.camel_discord.config.JDAConfig
 import org.apache.camel.builder.RouteBuilder
 import org.apache.camel.spring.boot.CamelAutoConfiguration
 import org.awaitility.Awaitility.await

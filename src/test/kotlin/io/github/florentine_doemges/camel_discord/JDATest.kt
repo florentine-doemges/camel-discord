@@ -1,8 +1,7 @@
-package net.doemges.cameldiscord
+package io.github.florentine_doemges.camel_discord
 
 import assertk.assertThat
 import assertk.assertions.isEqualTo
-import org.apache.camel.CamelConfiguration
 import org.apache.camel.spring.boot.CamelAutoConfiguration
 import org.awaitility.Awaitility.await
 import org.junit.jupiter.api.Test

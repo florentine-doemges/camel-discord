@@ -1,4 +1,4 @@
-package net.doemges.cameldiscord.config
+package io.github.florentine_doemges.camel_discord.config
 
 import net.dv8tion.jda.api.JDA
 import net.dv8tion.jda.api.JDABuilder

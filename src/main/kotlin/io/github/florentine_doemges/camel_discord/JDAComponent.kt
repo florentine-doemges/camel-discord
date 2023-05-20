@@ -1,4 +1,4 @@
-package net.doemges.cameldiscord
+package io.github.florentine_doemges.camel_discord
 
 import net.dv8tion.jda.api.JDA
 import org.apache.camel.Endpoint

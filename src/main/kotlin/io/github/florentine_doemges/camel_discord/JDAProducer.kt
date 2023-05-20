@@ -1,4 +1,4 @@
-package net.doemges.cameldiscord
+package io.github.florentine_doemges.camel_discord
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
