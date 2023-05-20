@@ -1,4 +1,4 @@
-package net.doemges.cameldiscord
+package net.doemges.utils
 
 import com.appmattus.kotlinfixture.decorator.fake.javafaker.javaFakerStrategy
 import com.appmattus.kotlinfixture.kotlinFixture

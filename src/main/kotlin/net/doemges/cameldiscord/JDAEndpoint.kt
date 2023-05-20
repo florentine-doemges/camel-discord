@@ -7,6 +7,7 @@ import org.apache.camel.Producer
 import org.apache.camel.support.DefaultConsumer
 import org.apache.camel.support.DefaultEndpoint
 import org.slf4j.LoggerFactory
+import javax.security.auth.login.LoginException
 
 
 /**
@@ -22,18 +23,20 @@ import org.slf4j.LoggerFactory
 class JDAEndpoint(
     uri: String,
     component: JDAComponent,
-    token: String,
-    val guildId: String?,
-    val channelId: String?,
-    private val jda: JDA = JDABuilder.createDefault(token)
-        .build()
-        .awaitReady()
+    private val guildId: String?,
+    private val channelId: String?,
+    private val jda: JDA
 ) :
     DefaultEndpoint(uri, component) {
 
     private val logger = LoggerFactory.getLogger(this::class.java)
 
+    override fun isLenientProperties(): Boolean = true
+
     init {
+        logger.info("Creating JDAEndpoint with guildId: $guildId and channelId: $channelId")
+        jda.awaitReady()
+        logger.info("JDA is ready")
         Runtime.getRuntime()
             .addShutdownHook(Thread {
                 jda.shutdownNow()
@@ -44,10 +47,12 @@ class JDAEndpoint(
         JDAConsumer(this, processor, jda, guildId, channelId)
 
     override fun createProducer(): Producer {
+        logger.info("Creating producer for channel with id: $channelId")
         if (channelId == null) {
             logger.error("Channel ID is not set")
             error("Channel ID is not set")
         }
-        return JDAProducer(this, jda.getTextChannelById(channelId))
+        logger.info("Channel ID is set to: $channelId")
+        return JDAProducer(this, jda, channelId)
     }
 }

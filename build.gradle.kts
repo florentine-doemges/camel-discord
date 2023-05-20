@@ -30,6 +30,8 @@ dependencies {
     implementation("org.apache.camel.springboot:camel-spring-boot-starter:4.0.0-M3")
     implementation("net.dv8tion:JDA:4.4.0_350")
     implementation("org.apache.camel:camel-core:4.0.0-M3")
+    implementation("org.apache.camel.springboot:camel-spring-boot-starter:4.0.0-M3")
+    implementation("org.apache.camel:camel-kotlin-dsl:4.0.0-M3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.6.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-debug:1.6.4")
@@ -40,6 +42,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.mockk:mockk:1.13.5")
     testImplementation("com.willowtreeapps.assertk:assertk:0.25")
+    testImplementation("org.awaitility:awaitility:4.2.0")
 }
 
 tasks.test {
